@@ -1,0 +1,135 @@
+<!--#include file="/_dtd.html" -->
+  
+<title>TTS 생성 | 장학재단</title>
+</head>
+<body>
+  <div class="wrap">
+<!--#include file="/_header.html" -->
+    <section class="layout_body">
+<!--#include file="/_menu.html" -->
+      <div class="layout_content">
+<!--#include file="/_location.html" -->
+        <article class="content">
+          <h1 class="content_main_title">TTS 테스트</h1>
+          <p class="content_main_title_txt">작성한 텍스트의 TTS를 듣고, 다운받을 수 있습니다.</p>
+          
+          <section>
+
+            <article class="view_content">
+              <div class="form_group__row">
+                <span class="search_form__label w80">원문 TEXT</span>
+                <textarea name="" id="" class="form_item_textarea"></textarea>
+              </div>
+              <div class="form_group__row">
+                <span class="search_form__label w80">STK_MIN</span>
+                <span class="_view_txt">
+                  <input type="number" class="form_item_text">
+                  <span class="chart_info_list__txt mb10">* STK_MIN: 설명</span>
+                </span>
+              </div>
+              <div class="form_group__row">
+                <span class="search_form__label w80">STK_MAX</span>
+                <span class="_view_txt">
+                  <input type="number" class="form_item_text">
+                  <span class="chart_info_list__txt mb10">* STK_MAX: 설명</span>
+                </span>
+              </div>
+              <div class="form_group__row">
+                <span class="search_form__label w80">PITCH</span>
+                <span class="_view_txt">
+                  <input type="number" class="form_item_text">
+                  <span class="chart_info_list__txt mb10">* PITCH: 설명</span>
+                </span>
+              </div>
+              <div class="form_group__row">
+                <span class="search_form__label w80">TEMPO</span>
+                <span class="_view_txt">
+                  <input type="number" class="form_item_text">
+                  <span class="chart_info_list__txt mb10">* TEMPO: 설명</span>
+                </span>
+              </div>
+            </article>
+            <div class="search_btn_group">
+              <button type="button" class="btn_submit">생성</button>
+            </div>
+
+
+            <section class="layout_chart mt20">
+              <article class="dl_box">
+                <div class="dl_box_head _between">
+                  <div class="inline_group">
+                    <h1 class="dl_box_head__title">STT 생성 결과</h1>
+                    <span class="label_title">3시간 이내의 생성 파일만 제공 가능합니다.</span>
+                  </div>
+                </div>
+                <div class="dl_box_body _table_cell">
+                  <section class="dl_box_body__item">
+                    <div class="list_table_group__body">
+                      <table class="list_table">
+                        <colgroup>
+                          <col style="width:100px">
+                          <col style="width:auto">
+                          <col style="width:15%">
+                          <col style="width:150px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>순번</th>
+                            <th>출력 문장</th>
+                            <th>생성 파일</th>
+                            <th>다운로드</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>10</td>
+                            <td class="text_left">안녕하세요 한국 장학 재단입니다.</td>
+                            <td>
+                              <audio controls>
+                                <source src="/examples/media/sample_audio_ogg.ogg" type="audio/ogg">
+                                <source src="/examples/media/sample_audio_mp3.mp3" type="audio/mpeg">
+                                현재 브라우저가 audio 태그를 지원하지 않습니다. 최신 브라우저를 사용해주세요.
+                              </audio>
+                            </td>
+                            <td>
+                              <div class="btn_group">
+                                <button type="button" class="btn_file_down">다운로드</button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td class="text_left">안녕하세요 한국 장학 재단입니다.</td>
+                            <td>
+                              <audio controls>
+                                <source src="/examples/media/sample_audio_ogg.ogg" type="audio/ogg">
+                                <source src="/examples/media/sample_audio_mp3.mp3" type="audio/mpeg">
+                                현재 브라우저가 audio 태그를 지원하지 않습니다. 최신 브라우저를 사용해주세요.
+                              </audio>
+                            </td>
+                            <td>
+                              <div class="btn_group">
+                                <button type="button" class="btn_file_down">다운로드</button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+      
+                      <div class="list_none">생성된 내용이 없습니다.</div>
+                      
+                    </div>
+                  </section>
+
+                </div>
+              </article>
+            </section>
+
+          </section>
+          
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
