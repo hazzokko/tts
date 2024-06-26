@@ -31,11 +31,11 @@ public class SecurityConfig {
 					.formLogin()
 					.loginPage("/api/v1/login")
 					.loginProcessingUrl("/login")
-					.defaultSuccessUrl("/")
+					.defaultSuccessUrl("/");
 
-				.and()
-					.sessionManagement()
-					.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//				.and()
+//					.sessionManagement()
+//					.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
 		return http.build();
 	}
