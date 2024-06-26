@@ -27,4 +27,17 @@ public class MainController {
 	public String login() {
 		return "login";
 	}
+	
+	/* 회원가입 폼으로 이동 */
+	@GetMapping("/join")
+	public String Join() {
+		return "join";
+	}
+	
+	/* 회원가입 */
+	@PostMapping("/join")
+	public String join(@ModelAttribute UserJoinRequestDto dto) {
+		userService.join(dto);
+		return "redirect:/api/v1/login";
+	}
 }
