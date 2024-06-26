@@ -14,4 +14,9 @@ public interface UserMapper {
 			+ "FROM users "
 			+ "WHERE id = #{id}")
 	User findByUsername(Long id);
+	
+	/* 회원가입 */
+	@Insert("INSERT INTO users (id, password_enc, username, department, phone, role) "
+			+ "VALUES (#{id}, #{password}, #{username}, #{department}, #{phone}, #{role})")
+	void join(User user);
 }
