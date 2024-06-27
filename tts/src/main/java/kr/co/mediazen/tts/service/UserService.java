@@ -1,9 +1,6 @@
 package kr.co.mediazen.tts.service;
 
-import java.util.Optional;
-
-import kr.co.mediazen.tts.dto.request.UserJoinRequestDto;
-import kr.co.mediazen.tts.model.User;
+import kr.co.mediazen.tts.model.UserVO;
 
 public interface UserService {
 
@@ -17,6 +14,5 @@ public interface UserService {
 	 * @author minji
 	 * @since 2024.06.24
 	 */
-	void join(UserJoinRequestDto dto);
-	
+	void join(UserVO userVO);
 }

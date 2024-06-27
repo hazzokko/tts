@@ -1,22 +1,15 @@
 package kr.co.mediazen.tts.mapper;
 
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
-import kr.co.mediazen.tts.model.User;
+import kr.co.mediazen.tts.model.UserVO;
 
 @Mapper
 public interface UserMapper {
 	
 	/* 로그인 */
-	@Select("SELECT id, password_enc, username, department, phone, role, created_at::TIMESTAMP AS created_at, modified_at::TIMESTAMP AS modified_at "
-			+ "FROM users "
-			+ "WHERE id = #{id}")
-	User findByUsername(Long id);
+	UserVO findByUsername(Long id);
 	
 	/* 회원가입 */
-	@Insert("INSERT INTO users (id, password_enc, username, department, phone, role) "
-			+ "VALUES (#{id}, #{password}, #{username}, #{department}, #{phone}, #{role})")
-	void join(User user);
+	void join(UserVO userVO);
 }
