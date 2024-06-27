@@ -1,4 +1,4 @@
-package kr.co.mediazen.tts.dto.request.validation;
+package kr.co.mediazen.tts.dao.request.validation;
 
 public class ValidationDefaultMsgUtil {
 	
