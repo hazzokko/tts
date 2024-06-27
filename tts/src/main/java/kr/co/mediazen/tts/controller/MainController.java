@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.co.mediazen.tts.dto.request.UserJoinRequestDto;
+import kr.co.mediazen.tts.model.UserVO;
 import kr.co.mediazen.tts.service.UserService;
 import lombok.RequiredArgsConstructor;
 
@@ -36,8 +36,8 @@ public class MainController {
 	
 	/* 회원가입 */
 	@PostMapping("/join")
-	public String join(@ModelAttribute UserJoinRequestDto dto) {
-		userService.join(dto);
+	public String join(@ModelAttribute UserVO userVO) {
+		userService.join(userVO);
 		return "redirect:/api/v1/login";
 	}
 }

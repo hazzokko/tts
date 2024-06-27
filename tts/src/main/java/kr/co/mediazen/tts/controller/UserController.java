@@ -11,8 +11,8 @@ import lombok.RequiredArgsConstructor;
 @Controller
 public class UserController {
 	
-	@GetMapping("/")
-	public String hello() {
-		return "hello";
+	@GetMapping
+	public String userPage() {
+		return "main";
 	}
 }
