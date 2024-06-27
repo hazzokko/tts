@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.mediazen.tts.mapper.UserMapper;
-import kr.co.mediazen.tts.model.User;
+import kr.co.mediazen.tts.model.UserVO;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -20,11 +20,11 @@ public class PrincipalDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Long userId = Long.parseLong(username);
-		User user = userMapper.findByUsername(userId);
-		if (user == null) {
-			return null;
+		UserVO userVO = userMapper.findByUsername(userId);
+		if (userVO == null) {
+			throw new UsernameNotFoundException("User not found with username: " + username);
 		} else {
-			return new PrincipalDetails(user);
+			return new PrincipalDetails(userVO);
 		}
 	}
 }

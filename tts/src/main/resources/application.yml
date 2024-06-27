@@ -17,6 +17,7 @@ spring:
       suffix: .jsp
     pathmatch:
       matching-strategy: ant_path_matcher
+    static-path-pattern: /resources/**
       
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>JSP TEST!</h1>
+	<a href="/api/v1/users">권한 확인하러 고~!</a>
 </body>
 </html>
