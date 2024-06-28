@@ -28,6 +28,7 @@ public class SecurityConfig {
 					.formLogin()
 					.loginPage("/api/v1/login")
 					.loginProcessingUrl("/login")
+					.usernameParameter("id")
 					.defaultSuccessUrl("/");
 
 //				.and()

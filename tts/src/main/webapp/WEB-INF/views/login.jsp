@@ -32,7 +32,7 @@
 			<section class="login_form">
 				<h1 class="login_form__title">로그인</h1>
 				<form action="/login" method="POST">
-					<input type="text" name="username" class="login_form_txt w100p" placeholder="사원번호" />
+					<input type="text" name="id" class="login_form_txt w100p" placeholder="사원번호" />
 					<input type="password" name="password" class="login_form_txt w100p" placeholder="비밀번호" />
 					<button type="submit" class="btn_login">로그인</button>
 				</form>

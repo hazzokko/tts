@@ -12,8 +12,8 @@ public class PrincipalDetails implements UserDetails {
 	
 	private UserVO userVO;
 	
-	public PrincipalDetails(UserVO user) {
-		this.userVO = user;
+	public PrincipalDetails(UserVO userVO) {
+		this.userVO = userVO;
 	}
 	
 	public UserVO getUser() {
@@ -35,7 +35,7 @@ public class PrincipalDetails implements UserDetails {
 	// User Table PK
 	@Override
 	public String getUsername() {
-		return userVO.getId() + "";
+		return userVO.getId();
 	}
 
 	@Override

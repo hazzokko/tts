@@ -5,7 +5,7 @@
 
 <mapper namespace="kr.co.mediazen.tts.mapper.UserMapper">
 
-	<select id="findByUsername" parameterType="long" resultType="kr.co.mediazen.tts.model.UserVO">
+	<select id="findByUsername" parameterType="String" resultType="kr.co.mediazen.tts.model.UserVO">
         SELECT id, password_enc as password, username, department, phone, role, created_at::TIMESTAMP AS created_at, modified_at::TIMESTAMP AS modified_at 
         FROM users 
         WHERE id = #{id}

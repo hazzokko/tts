@@ -5,14 +5,13 @@ import java.time.LocalDateTime;
 import javax.validation.constraints.NotBlank;
 
 import kr.co.mediazen.tts.dao.request.validation.ValidationDefaultMsgUtil;
-import lombok.Builder;
 import lombok.Data;
 
 @Data
 public class UserVO {
 	
 	@NotBlank(message = ValidationDefaultMsgUtil.UserJoin.ID)
-	private Long id;
+	private String id;
 	
 	@NotBlank(message = ValidationDefaultMsgUtil.UserJoin.PASSWORD)
 	private String password;

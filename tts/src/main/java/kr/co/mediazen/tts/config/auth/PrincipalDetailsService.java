@@ -18,11 +18,12 @@ public class PrincipalDetailsService implements UserDetailsService {
 	private final UserMapper userMapper;
 
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Long userId = Long.parseLong(username);
-		UserVO userVO = userMapper.findByUsername(userId);
+	public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
+		
+		UserVO userVO = userMapper.findByUsername(id);
+		
 		if (userVO == null) {
-			throw new UsernameNotFoundException("User not found with username: " + username);
+			throw new UsernameNotFoundException("User not found with username: " + id);
 		} else {
 			return new PrincipalDetails(userVO);
 		}
