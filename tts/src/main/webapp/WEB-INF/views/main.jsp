@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-	
-	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-	<div class="sidebar">
-		<jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>
-	</div>
+
         <div class="layout_content">
 	        <section class="location">
 	          <i class="location_home"></i>
