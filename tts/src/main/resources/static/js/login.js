@@ -1,8 +1,8 @@
 $(document).ready(function() {
     
     // 입력 필드 변경 시 버튼 활성화/비활성화
-    $('input[name="username"], input[name="password"]').on('input', function() {
-        var username = $('input[name="username"]').val();
+    $('input[name="id"], input[name="password"]').on('input', function() {
+        var username = $('input[name="id"]').val();
         var password = $('input[name="password"]').val();
 
         if (username && password) {

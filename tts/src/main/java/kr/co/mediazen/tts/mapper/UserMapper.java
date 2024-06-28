@@ -8,7 +8,7 @@ import kr.co.mediazen.tts.model.UserVO;
 public interface UserMapper {
 	
 	/* 로그인 */
-	UserVO findByUsername(Long id);
+	UserVO findByUsername(String id);
 	
 	/* 회원가입 */
 	void join(UserVO userVO);

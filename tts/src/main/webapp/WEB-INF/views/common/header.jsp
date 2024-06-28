@@ -22,20 +22,6 @@
 	
 	<title>Main Page</title>
 
-	<style>
-    .sidebar {
-        float: left;
-        width: 15%; /* 원하는 너비로 조정 */
-        min-width: 250px;
-        background-color: #f0f0f0;
-        box-sizing: border-box; /* padding, border 포함하여 너비 조정 */
-    }
-    .layout-content {
-        margin-left: 25%; /* 사이드바 너비 + 여백 만큼 메인 콘텐츠를 밀어줌 */
-        box-sizing: border-box;
-    }
-</style>
-
 </head>
 <body>
 	<header class="layout_header">
