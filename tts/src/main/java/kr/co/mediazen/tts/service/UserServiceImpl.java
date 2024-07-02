@@ -4,8 +4,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import kr.co.mediazen.tts.dao.request.UserDAO;
-import kr.co.mediazen.tts.model.UserVO;
+import kr.co.mediazen.tts.dto.request.UserJoinRequestDto;
+import kr.co.mediazen.tts.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -13,16 +13,17 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class UserServiceImpl implements UserService {
 	
-	private final UserDAO userDAO;
+	private final UserMapper userMapper;
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@Transactional
 	@Override
-	public void join(UserVO userVO) {
-		String rawPassword = userVO.getPassword();
+	public void join(UserJoinRequestDto dto) {
+		String rawPassword = dto.getPassword();
 		String encPassword = bCryptPasswordEncoder.encode(rawPassword);
-		userVO.setPassword(encPassword);
+		dto.setPassword(encPassword);
 		
-		userDAO.join(userVO);
+		userMapper.join(dto);
 	}
+
 }
