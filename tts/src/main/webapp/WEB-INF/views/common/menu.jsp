@@ -13,7 +13,7 @@
         <section class="lnb_list_group">
           <h2 class="lnb_list_title">공지사항</h2>
           <ul class="lnb_list">
-            <li><a href="A_01_메인페이지_대시보드.html" class="lnb_list__link _01_01">공지사항 조회</a></li>
+            <li><a href="./notices" class="lnb_list__link _01_01">공지사항 조회</a></li>
           </ul>
         </section>
 
