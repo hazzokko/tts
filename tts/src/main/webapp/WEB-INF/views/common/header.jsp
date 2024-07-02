@@ -18,7 +18,9 @@
 	<script src="<c:url value='/resources/js/vendor/jquery-3.5.1.min.js' />"></script>
 	<script src="<c:url value='/resources/js/vendor/jquery.mCustomScrollbar.js' />"></script>
 	<script src="<c:url value='/resources/js/common.js' />"></script>
-	<script src="<c:url value='/resources/js/login.js' />"></script>
+	<script src="<c:url value='/resources/js/login.js' />"></script> <!-- 로그인 -->
+	<script src="<c:url value='/resources/js/notice-list.js' />"></script> <!-- 게시글 목록 조회 -->
+	<script src="<c:url value='/resources/js/pagination.js' />"></script> <!-- 페이징 -->
 	
 	<title>Main Page</title>
 
