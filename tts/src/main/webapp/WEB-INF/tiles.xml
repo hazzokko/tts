@@ -17,5 +17,11 @@
 		<put-attribute name="title" value="메인페이지" />
 		<put-attribute name="body" value="/WEB-INF/views/main.jsp" />
 	</definition>
+	
+	<!-- 공지사항 목록 설정 -->
+    <definition name="noticeList" extends="baseLayout">
+		<put-attribute name="title" value="공지사항 목록 조회" />
+		<put-attribute name="body" value="/WEB-INF/views/notice/list.jsp" />
+	</definition>
     
 </tiles-definitions>

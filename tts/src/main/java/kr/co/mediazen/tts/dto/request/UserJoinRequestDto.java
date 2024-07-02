@@ -1,14 +1,22 @@
-package kr.co.mediazen.tts.model;
+package kr.co.mediazen.tts.dto.request;
 
 import java.time.LocalDateTime;
 
 import javax.validation.constraints.NotBlank;
 
 import kr.co.mediazen.tts.dao.request.validation.ValidationDefaultMsgUtil;
+import kr.co.mediazen.tts.model.Department;
+import kr.co.mediazen.tts.model.Role;
 import lombok.Data;
 
 @Data
-public class UserVO {
+public class UserJoinRequestDto {
+
+//	private final UserMapper userMapper;
+//	
+//	public void join(UserVO userVO) {
+//		userMapper.join(userVO);
+//	}
 	
 	@NotBlank(message = ValidationDefaultMsgUtil.UserJoin.ID)
 	private String id;

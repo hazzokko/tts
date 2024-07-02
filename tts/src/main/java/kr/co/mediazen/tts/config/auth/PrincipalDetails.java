@@ -6,36 +6,37 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import kr.co.mediazen.tts.model.UserVO;
+import kr.co.mediazen.tts.dto.response.UserLoginResponseDto;
 
 public class PrincipalDetails implements UserDetails {
 	
-	private UserVO userVO;
+	private static final long serialVersionUID = 1L;
+	private UserLoginResponseDto dto;
 	
-	public PrincipalDetails(UserVO userVO) {
-		this.userVO = userVO;
+	public PrincipalDetails(UserLoginResponseDto dto) {
+		this.dto = dto;
 	}
 	
-	public UserVO getUser() {
-		return userVO;
+	public UserLoginResponseDto getUser() {
+		return dto;
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Collection<GrantedAuthority> collect = new ArrayList<GrantedAuthority>();
-		collect.add(() -> { return userVO.getRole().toString(); });
+		collect.add(() -> { return dto.getRole().toString(); });
 		return collect;
 	}
 
 	@Override
 	public String getPassword() {
-		return userVO.getPassword();
+		return dto.getPassword();
 	}
 
 	// User Table PK
 	@Override
 	public String getUsername() {
-		return userVO.getId();
+		return dto.getId();
 	}
 
 	@Override

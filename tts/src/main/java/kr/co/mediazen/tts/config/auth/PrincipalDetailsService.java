@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import kr.co.mediazen.tts.dto.response.UserLoginResponseDto;
 import kr.co.mediazen.tts.mapper.UserMapper;
-import kr.co.mediazen.tts.model.UserVO;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -20,12 +20,12 @@ public class PrincipalDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
 		
-		UserVO userVO = userMapper.findByUsername(id);
+		UserLoginResponseDto dto = userMapper.findByUsername(id);
 		
-		if (userVO == null) {
+		if (dto == null) {
 			throw new UsernameNotFoundException("User not found with username: " + id);
 		} else {
-			return new PrincipalDetails(userVO);
+			return new PrincipalDetails(dto);
 		}
 	}
 }

@@ -5,13 +5,13 @@
 
 <mapper namespace="kr.co.mediazen.tts.mapper.UserMapper">
 
-	<select id="findByUsername" parameterType="String" resultType="kr.co.mediazen.tts.model.UserVO">
+	<select id="findByUsername" parameterType="String" resultType="kr.co.mediazen.tts.dto.response.UserLoginResponseDto">
         SELECT id, password_enc as password, username, department, phone, role, created_at::TIMESTAMP AS created_at, modified_at::TIMESTAMP AS modified_at 
         FROM users 
         WHERE id = #{id}
     </select>
 
-    <insert id="join" parameterType="kr.co.mediazen.tts.model.UserVO">
+    <insert id="join" parameterType="kr.co.mediazen.tts.dto.request.UserJoinRequestDto">
         INSERT INTO users (id, password_enc, username, department, phone, role)
         VALUES (#{id}, #{password}, #{username}, #{department}, #{phone}, #{role})
     </insert>

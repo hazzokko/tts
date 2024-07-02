@@ -310,5 +310,3 @@
 
         </article>
       </div>
-</body>
-</html>
