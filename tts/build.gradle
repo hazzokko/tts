@@ -59,6 +59,9 @@ dependencies {
     implementation 'org.apache.tiles:tiles-core:3.0.8'
     implementation 'org.apache.tiles:tiles-servlet:3.0.8'
     
+    // Pageable
+    implementation 'org.springframework.data:spring-data-commons:2.2.9.RELEASE'
+    
 	// Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
