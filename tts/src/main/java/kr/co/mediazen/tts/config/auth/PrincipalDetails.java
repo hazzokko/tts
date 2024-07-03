@@ -38,6 +38,11 @@ public class PrincipalDetails implements UserDetails {
 	public String getUsername() {
 		return dto.getId();
 	}
+	
+	// 사용자에게 보여줄 실제 사원명을 반환
+	public String getDisplayName() {
+        return dto.getUsername();
+    }
 
 	@Override
 	public boolean isAccountNonExpired() {
