@@ -19,11 +19,7 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	@Override
 	public void join(UserJoinRequestDto dto) {
-		String rawPassword = dto.getPassword();
-		String encPassword = bCryptPasswordEncoder.encode(rawPassword);
-		dto.setPassword(encPassword);
-		
+		dto.setPassword(bCryptPasswordEncoder.encode(dto.getPassword()));
 		userMapper.join(dto);
 	}
-
 }

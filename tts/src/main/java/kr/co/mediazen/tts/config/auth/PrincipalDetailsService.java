@@ -23,7 +23,7 @@ public class PrincipalDetailsService implements UserDetailsService {
 		UserLoginResponseDto dto = userMapper.findByUsername(id);
 		
 		if (dto == null) {
-			throw new UsernameNotFoundException("User not found with username: " + id);
+			throw new UsernameNotFoundException("계정이 존재하지 않습니다. 회원가입 진행 후 로그인 해주세요.");
 		} else {
 			return new PrincipalDetails(dto);
 		}
