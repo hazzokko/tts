@@ -1,7 +1,6 @@
 $(function() {
 	
 	loadNotices(0);
-    let isFirstLoad = true; // 페이지 최초 로딩 여부 확인
 
     const pagination = new Pagination({
         paginationElement: '#pagination .pagination_list',
@@ -19,12 +18,6 @@ $(function() {
             success: function(data) {
                 const tbody = $('.list_table tbody');
                 tbody.empty();
-
-                // 페이지 최초 로딩 시에만 '공지사항 목록 조회 성공' 메시지 출력
-                if (isFirstLoad) {
-                    alert(data.message);
-                    isFirstLoad = false;
-                }
 
                 if (data.data.pages.content.length === 0) {
                     $('.list_none').show();
