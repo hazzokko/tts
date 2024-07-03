@@ -17,6 +17,9 @@ public class UserLoginResponseDto {
 	@NotBlank(message = ValidationDefaultMsgUtil.UserJoin.PASSWORD)
 	private String password;
 	
+	// 사원명
+	private String username;
+	
 	// 직위
 	@NotBlank(message = ValidationDefaultMsgUtil.UserJoin.ROLE)
 	private Role role;
