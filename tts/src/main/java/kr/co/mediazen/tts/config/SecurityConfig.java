@@ -37,7 +37,13 @@ public class SecurityConfig {
 					.loginProcessingUrl("/login")
 					.usernameParameter("id")
 					.failureHandler(customAuthenticationFailureHandler)
-					.defaultSuccessUrl("/api/v1/users"); // 로그아웃 시 사용자 세션 삭제
+					.defaultSuccessUrl("/api/v1/users")
+					
+				.and()
+					.logout().logoutRequestMatcher(new AntPathRequestMatcher("/api/v1/auth/logout"))
+					.logoutSuccessUrl("/api/v1/auth/login")
+					.deleteCookies("JSESSIONID")
+					.invalidateHttpSession(true); // 로그아웃 시 사용자 세션 삭제
 
 		return http.build();
 	}

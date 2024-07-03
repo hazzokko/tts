@@ -57,4 +57,19 @@ public class AuthController {
 		userService.join(dto);
 		return "redirect:/api/v1/auth/login";
 	}
+	
+	// 로그아웃
+	@GetMapping("/logout")
+	public String logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		
+		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
+		
+		if (authentication != null) {
+			new SecurityContextLogoutHandler().logout(request, response, authentication);
+		}
+		
+		return "redirect:/api/v1/auth/login";
+	}
 }
