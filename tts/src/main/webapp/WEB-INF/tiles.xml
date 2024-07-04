@@ -23,5 +23,11 @@
 		<put-attribute name="title" value="공지사항 목록 조회" />
 		<put-attribute name="body" value="/WEB-INF/views/notice/list.jsp" />
 	</definition>
+	
+	<!-- 공지사항 등록 설정 -->
+    <definition name="postNotice" extends="baseLayout">
+		<put-attribute name="title" value="공지사항 등록" />
+		<put-attribute name="body" value="/WEB-INF/views/notice/post-form.jsp" />
+	</definition>
     
 </tiles-definitions>
