@@ -7,6 +7,6 @@
 	        </ul>
 	    </nav>
 	    <div class="list_table_group__foot_right">
-	        <a href="#none" class="btn_submit">등록</a>
+	        <a href="/api/v1/notices/post-form" class="btn_submit">등록</a>
 	    </div>
 	</div>
